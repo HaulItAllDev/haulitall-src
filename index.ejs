@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title><%= htmlWebpackPlugin.options.content.pageTitle %></title>
+</head>
+<body>
+    <div class="content">
+        <div class="left">
+            <h1>
+                <a href="tel:970.787.5183">
+                    <img src="assets/images/logo.png" alt="Local hauling, garbage removal, and truck services" />
+                </a>
+            </h1>
+            <div class="services">
+                <h2><%= htmlWebpackPlugin.options.content.services.title %></h2>
+                <p><%= htmlWebpackPlugin.options.content.services.description %></p>
+            </div>
+            <div class="rates">
+                <h2><%= htmlWebpackPlugin.options.content.rates.title %></h2>
+                <p><%= htmlWebpackPlugin.options.content.rates.description %></p>
+            </div>
+        </div>
+        <div class="right">
+        </div>
+    </div>
+    <div class="cta-region">
+        <ul class="callouts">
+            <% htmlWebpackPlugin.options.content.callouts.forEach(function(callout) { %>
+                <li class="callout">
+                    <div class="inner-callout">
+                        <h3>
+                            <%= callout.title %>
+                        </h3>
+                        <p>
+                            <%= callout.description %>
+                        </p>
+                        <% if(callout.lineItems && callout.lineItems.length) { %>
+                        <ul>
+                            <% callout.lineItems.forEach(function(item) { %>
+                            <li>
+                                <span class="name"><%= item.name %></span>
+                                <span class="cost">$<%= item.cost %></span>
+                            </li>
+                            <% }); %>
+                        </ul>
+                        <% } %>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="footer">
+        FOR CUSTOM PRICING PLEASE CONTACT KC STEURY <a href="tel:970.787.5183">970.787.5183</a>
+    </div>
+</body>
+</html>

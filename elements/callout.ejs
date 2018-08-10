@@ -1,0 +1,18 @@
+<div class="callout">
+    <h3>
+        <%= callout.title %>
+    </h3>
+    <p>
+        <%= callout.description %>
+    </p>
+    <%= if(callout.lineItems && callout.lineItems.length) { %>
+        <ul>
+        <%= callout.lineItems.forEach(function(item) { %>
+            <li>
+                <span class="name"><%= item.name %></span>
+                <span class="cost"><%= item.cost %></span>
+            </li>
+        <%= }); %>
+        </ul>
+    <%= } %>
+</div>

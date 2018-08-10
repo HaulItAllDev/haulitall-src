@@ -1,0 +1,56 @@
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+@import "variables";
+html {
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+    padding:0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width:100%;
+}
+
+h2 {
+    font-size:2.5em;
+}
+
+h3 {
+    font-size:1.5em;
+}
+
+p {
+    margin:4px 0;
+}
+
+@font-face {
+    font-family: FallingSkyWeb;
+    src: url("../fonts/fallingsky.otf") format("opentype");
+}
+
+* {
+    font-family:FallingSkyWeb, verdana;
+}
+
+a {
+    color: $brand-red;
+}
+
+@import 'variables';
+@import 'components/cta-box';
+@import 'components/footer';
+@import 'front';
