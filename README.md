@@ -9,7 +9,7 @@ If you don’t want to work with lodash, just remove it from the node packages a
 ## Download
 Download in current directory
 ```sh
-$ curl -L -o master.zip https://github.com/cvgellhorn/webpack-boilerplate/archive/master.zip && unzip master.zip && rm master.zip && mv ./webpack-boilerplate-master/{.,}* ./ && rm -r ./webpack-boilerplate-master
+$ git clone git@github.com:HaulItAllDev/haulitall-src haulitall
 ```
 
 ## Setup
